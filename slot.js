@@ -16,3 +16,33 @@ const SYMBOL_VALUES = {
     C: 12,
     D: 12
 };
+
+// State 
+let balance = 0;
+
+// DOM rreferences
+
+const balanceElement = document.getElementById(' balance');
+const spinButton = document.getElementById('spinButton');
+const depositButton = document.getElementById('depositButton');
+const betAmount = document.getElementById('betAmount');
+const numberOfLines = document.getElementById('numberOfLines');
+const cells = document.querySelectorAll('.cell');
+
+
+// Initialize Game
+
+const initialize = () => {
+    updateBalanceDisplay();
+};
+//Display Balance
+const updateBalanceDisplay = () => {
+    balanceElement.innerText = balance;
+};
+
+// Handle spin Button
+
+spinButton.addEventListener('click', () => {
+    const betAmount = parseFloat(betAmountElement.value);
+    const numberOfLines = parseInt(numberOfLinesElement.value);
+})

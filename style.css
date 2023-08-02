@@ -3,7 +3,7 @@
 
 body {
     font-family: "handjet";
-    font-size: 700;
+    font-size: 400;
     background: url('assets/slotmachine-pic.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -16,9 +16,11 @@ body {
 .container {
     border: 6px solid rgb(248, 176, 82);
     padding: 20px;
+    background-color: rgba(172, 138, 138, 0.5);
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
+
 
 .game-board{ 
     display: flex;
@@ -27,4 +29,121 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 
+}
+
+
+.game-inputs {
+    display: flex;
+    justify-content: space-around; /* or space-between */
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    font-family: 'Press Start 2P', cursive;
+    color: #007BFF;
+    font-size: 1em;
+    width: 80%; /* Adjust the width if necessary */
+    align-self: center;
+}
+
+
+.game-inputs label {
+    margin-right: 10px;
+}
+
+.game-inputs input {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    width: 50px;
+    text-align: center;
+}
+
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    line-height: 60px;
+    margin: 10px;
+    padding: 20px;
+    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+    transition: all 0.5s ease;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: buttonAnimation 1s infinite;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+@keyframes buttonAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+/* Style for large screens */
+@media (min-width: 1200px) {
+    .game-inputs {
+        width: 70%;
+    }
+    .cell {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+/* Style for medium screens */
+@media (min-width: 800px) and (max-width: 1199px) {
+    .game-inputs {
+        width: 80%;
+    }
+    .cell {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+/* Style for small screens */
+@media (max-width: 799px) {
+    .game-inputs {
+        width: 80%;
+        flex-direction: column; /* stack the inputs vertically */
+    }
+    .cell {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px #ff0000;
+    color: #fff;
 }

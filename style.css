@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500;700&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+body {
+    font-family: "handjet";
+    font-size: 700;
+    background: url('assets/slotmachine-pic.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    border: 6px solid rgb(248, 176, 82);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.game-board{ 
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
